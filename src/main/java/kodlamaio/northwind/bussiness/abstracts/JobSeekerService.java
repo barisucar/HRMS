@@ -4,9 +4,10 @@ import java.util.List;
 
 import kodlamaio.northwind.core.result.DataResult;
 import kodlamaio.northwind.core.result.Result;
-import kodlamaio.northwind.entites.concrate.User;
+import kodlamaio.northwind.entites.concrate.JobSeeker;
 
-public interface UserService {
-	DataResult<List<User>> getAll();
-	Result add(User user);
+public interface JobSeekerService {
+	DataResult<List<JobSeeker>> getAll();
+	Result add(JobSeeker jobSeeker);
+
 }

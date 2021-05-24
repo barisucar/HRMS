@@ -2,8 +2,11 @@ package kodlamaio.northwind.bussiness.abstracts;
 
 import java.util.List;
 
+import kodlamaio.northwind.core.result.DataResult;
+import kodlamaio.northwind.core.result.Result;
 import kodlamaio.northwind.entites.concrate.Job;
 
 public interface JobService {
-	public List<Job> getAll();
+	DataResult<List<Job>> getAll();
+	Result add(Job job);
 }

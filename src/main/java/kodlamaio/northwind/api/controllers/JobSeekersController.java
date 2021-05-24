@@ -9,31 +9,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import kodlamaio.northwind.bussiness.abstracts.JobService;
+import kodlamaio.northwind.bussiness.abstracts.JobSeekerService;
 import kodlamaio.northwind.core.result.DataResult;
 import kodlamaio.northwind.core.result.Result;
-import kodlamaio.northwind.entites.concrate.Job;
+import kodlamaio.northwind.entites.concrate.JobSeeker;
 
 @RestController
-@RequestMapping("/api/jobs")
-public class JobsController {
-
-	private final JobService jobService;
+@RequestMapping("/api/jobseekers")
+public class JobSeekersController {
+	
+	private final JobSeekerService jobSeekerService;
 
 	@Autowired
-	public JobsController(JobService jobService) {
+	public JobSeekersController(JobSeekerService jobSeekerService) {
 		super();
-		this.jobService = jobService;
+		this.jobSeekerService = jobSeekerService;
 	}
-
+	
 	@GetMapping("/getall")
-	public DataResult<List<Job>> getAll() {
-		return this.jobService.getAll();
+	public DataResult<List<JobSeeker>> getAll(){
+		return this.jobSeekerService.getAll();
 	}
-
+	
 	@PostMapping("/add")
-	public Result add(@RequestBody Job job) {
-		return this.jobService.add(job);
+	public Result add(@RequestBody JobSeeker jobSeeker) {
+		return this.jobSeekerService.add(jobSeeker);
 	}
-
 }

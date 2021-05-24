@@ -6,32 +6,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="users")
+@Table(name = "Users")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
 	@Id
 	@GeneratedValue
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
-	
-	@Column(name="Email")
-	private String email;
-	@Column(name="Password")
-	private String password;
-	
-	public User() {}
 
-	public User(int id, String email, String password) {
-		super();
-		this.id = id;
-		this.email = email;
-		this.password = password;
-	}
-	
-	
-	
+	@Column(name = "Email")
+	private String email;
+	@Column(name = "Password")
+	private String password;
+
 }

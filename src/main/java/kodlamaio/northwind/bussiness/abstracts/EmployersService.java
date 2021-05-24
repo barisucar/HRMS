@@ -2,11 +2,13 @@ package kodlamaio.northwind.bussiness.abstracts;
 
 import java.util.List;
 
+
 import kodlamaio.northwind.core.result.DataResult;
 import kodlamaio.northwind.core.result.Result;
-import kodlamaio.northwind.entites.concrate.User;
+import kodlamaio.northwind.entites.concrate.Employer;
 
-public interface UserService {
-	DataResult<List<User>> getAll();
-	Result add(User user);
+
+public interface EmployersService {
+	DataResult<List<Employer>> getAll();
+	Result add(Employer employer);
 }
