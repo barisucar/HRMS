@@ -11,4 +11,5 @@ import kodlamaio.northwind.entites.concrate.Employer;
 public interface EmployersService {
 	DataResult<List<Employer>> getAll();
 	Result add(Employer employer);
+	
 }
