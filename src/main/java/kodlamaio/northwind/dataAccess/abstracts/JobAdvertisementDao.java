@@ -9,8 +9,8 @@ import kodlamaio.northwind.entites.concrate.JobAdvertisement;
 
 public interface JobAdvertisementDao extends JpaRepository<JobAdvertisement, Integer> {
 
-	@Query("From JobAdvertisement where employerId=:employerId and isActive=:isActive")
-	List<JobAdvertisement> getByEmployerIdAndIsActive(String employerId, Boolean isActive);
+	@Query("From JobAdvertisement where employer_id=:employerId and isActive=:isActive")
+	List<JobAdvertisement> getByEmployerIdAndIsActive(int employerId, Boolean isActive);
 	
 	
 		

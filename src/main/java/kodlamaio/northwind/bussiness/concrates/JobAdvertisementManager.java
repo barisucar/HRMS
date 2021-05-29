@@ -56,7 +56,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	}
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getByEmployer_EmployerIdAndIsActive(String employerId, Boolean isActive) {
+	public DataResult<List<JobAdvertisement>> getByEmployer_EmployerIdAndIsActive(int employerId, Boolean isActive) {
 		return new SuccessDataResult<List<JobAdvertisement>>
 		(this.jobAdvertisementDao.getByEmployerIdAndIsActive(employerId, isActive),"Data Listelendi");
 	}
