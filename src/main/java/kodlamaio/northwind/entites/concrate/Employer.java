@@ -36,6 +36,4 @@ public class Employer{
 	@Column(name="phone")
 	private String phone;
 	
-
-	
 }
