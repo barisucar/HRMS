@@ -36,4 +36,6 @@ public class JobSeekerManager implements JobSeekerService {
 		return new SuccessResult("Is arayan eklendi.");
 	}
 
+
+
 }

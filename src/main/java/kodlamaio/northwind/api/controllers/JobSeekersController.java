@@ -35,4 +35,6 @@ public class JobSeekersController {
 	public Result add(@RequestBody JobSeeker jobSeeker) {
 		return this.jobSeekerService.add(jobSeeker);
 	}
+	
+
 }

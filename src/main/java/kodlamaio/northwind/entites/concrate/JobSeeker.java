@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -33,4 +35,8 @@ public class JobSeeker {
 
 	@Column(name = "birth_year")
 	private String birthYear;
+	
+	@ManyToOne()
+	@JoinColumn(name ="id")
+	private Resume resume;
 }

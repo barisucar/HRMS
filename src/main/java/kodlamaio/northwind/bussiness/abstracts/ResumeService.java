@@ -4,11 +4,12 @@ import java.util.List;
 
 import kodlamaio.northwind.core.result.DataResult;
 import kodlamaio.northwind.core.result.Result;
-import kodlamaio.northwind.entites.concrate.JobSeeker;
+import kodlamaio.northwind.entites.concrate.Resume;
 
-public interface JobSeekerService {
-	DataResult<List<JobSeeker>> getAll();
-	Result add(JobSeeker jobSeeker);
+public interface ResumeService {
 
-
+	Result add(Resume resume);
+	
+	DataResult<List<Resume>> getAll();
+	
 }
