@@ -54,6 +54,8 @@ public class Resume {
 	@JoinColumn(name ="language_level_id")
 	private LanguageLevel languageLevel;
 	
-
+	@ManyToOne()
+	@JoinColumn(name="photo_id")
+	private Photo photo;
 	
 }
