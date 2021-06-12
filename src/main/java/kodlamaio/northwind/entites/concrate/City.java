@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,7 @@ import lombok.Data;
 @NoArgsConstructor
 @Entity
 @Table(name="cities")
-
+@CrossOrigin
 public class City {
 
 	@Id

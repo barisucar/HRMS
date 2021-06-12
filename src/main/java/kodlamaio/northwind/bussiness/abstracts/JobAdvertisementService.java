@@ -17,8 +17,12 @@ public interface JobAdvertisementService {
 	Result add(JobAdvertisement jobAdvertisement);
 
 	Result update(JobAdvertisement jobAdvertisement);
+	
+	
 
 	DataResult<List<JobAdvertisement>> getByEmployer_EmployerIdAndIsActive(int employerId, Boolean isActive);
+	
+	DataResult<List<JobAdvertisement>> getByIsActive( Boolean isActive);
 
 
 }

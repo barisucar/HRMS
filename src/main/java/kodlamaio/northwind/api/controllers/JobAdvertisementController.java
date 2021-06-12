@@ -4,6 +4,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ import kodlamaio.northwind.entites.concrate.JobAdvertisement;
 
 @RestController
 @RequestMapping("/api/JobAdvertisements")
+@CrossOrigin
 public class JobAdvertisementController {
 
 	private final JobAdvertisementService jobAdvertisementService;
@@ -56,5 +58,9 @@ public class JobAdvertisementController {
 	}
 	
 	
-
+	@GetMapping("/getByIsActive")
+	public DataResult<List<JobAdvertisement>> getByIsActive(@RequestParam Boolean isActive) {
+		return this.jobAdvertisementService.getByIsActive(isActive);
+	}
+	
 }

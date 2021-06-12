@@ -70,6 +70,14 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		return new SuccessResult("Guncellendi.");
 	}
 
+	@Override
+	public DataResult<List<JobAdvertisement>> getByIsActive(Boolean isActive) {
+		return new SuccessDataResult<List<JobAdvertisement>>
+		(this.jobAdvertisementDao.getByIsActive(isActive),"Data Listelendi");
+	}
+	
+
+
 
 
 
