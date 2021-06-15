@@ -18,11 +18,11 @@ public interface JobAdvertisementService {
 
 	Result update(JobAdvertisement jobAdvertisement);
 	
+	Result confirmJobAdvertisement(int id);
 	
-
 	DataResult<List<JobAdvertisement>> getByEmployer_EmployerIdAndIsActive(int employerId, Boolean isActive);
 	
 	DataResult<List<JobAdvertisement>> getByIsActive( Boolean isActive);
 
-
+	DataResult<List<JobAdvertisement>> getAllConfirmedJobAdvertisements();
 }

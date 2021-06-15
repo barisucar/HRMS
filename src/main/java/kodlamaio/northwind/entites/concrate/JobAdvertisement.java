@@ -71,6 +71,8 @@ public class JobAdvertisement {
 	@Column(name="creation_date")
 	private String creationDate;
 	
+	@Column(name="is_confirmed")
+	private Boolean isConfirmed;
 	
 }
 

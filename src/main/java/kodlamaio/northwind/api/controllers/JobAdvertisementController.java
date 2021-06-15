@@ -63,4 +63,14 @@ public class JobAdvertisementController {
 		return this.jobAdvertisementService.getByIsActive(isActive);
 	}
 	
+	@PostMapping("/confirmJobAdvertisementById")
+	public Result add(@RequestParam int id) {
+		return this.jobAdvertisementService.confirmJobAdvertisement(id);
+	}
+	
+	@GetMapping("/getAllConfirmedJobAdvertisements")
+	public DataResult<List<JobAdvertisement>> getAllConfirmedJobAdvertisements(){
+		return this.jobAdvertisementService.getAllConfirmedJobAdvertisements();
+	}
+	
 }

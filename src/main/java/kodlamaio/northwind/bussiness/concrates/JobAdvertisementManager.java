@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import kodlamaio.northwind.bussiness.abstracts.JobAdvertisementService;
 import kodlamaio.northwind.core.result.DataResult;
+import kodlamaio.northwind.core.result.ErrorResult;
 import kodlamaio.northwind.core.result.Result;
 import kodlamaio.northwind.core.result.SuccessDataResult;
 import kodlamaio.northwind.core.result.SuccessResult;
@@ -75,6 +76,26 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		return new SuccessDataResult<List<JobAdvertisement>>
 		(this.jobAdvertisementDao.getByIsActive(isActive),"Data Listelendi");
 	}
+
+	@Override
+	public Result confirmJobAdvertisement(int id) {
+		// TODO Auto-generated method stub
+		if(this.jobAdvertisementDao.existsById(id)) {
+			JobAdvertisement ad = this.jobAdvertisementDao.getOne(id);
+			
+			ad.setIsConfirmed(true);
+			jobAdvertisementDao.save(ad);
+			return new SuccessResult("Basarili");
+		}
+		return new ErrorResult("Ilan bulunamadi");
+	}
+
+	@Override
+	public DataResult<List<JobAdvertisement>> getAllConfirmedJobAdvertisements() {
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getAllConfirmedJobAdvertisements(),"Datalar listelendi");
+	}
+
+
 	
 
 
