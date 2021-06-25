@@ -21,8 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import kodlamaio.northwind.bussiness.abstracts.ResumeService;
 import kodlamaio.northwind.entites.concrate.Resume;
+import kodlamaio.northwind.entites.concrate.SystemPersonel;
 import kodlamaio.northwind.core.result.DataResult;
 import kodlamaio.northwind.core.result.ErrorDataResult;
+import kodlamaio.northwind.core.result.Result;
 
 @RestController
 @RequestMapping("/api/resumes")
@@ -60,5 +62,10 @@ public class ResumeController {
 		return errors;
 	}
 	
+	
+	@PostMapping("/update")
+	public Result update(Resume resume) {
+		return this.resumeService.update(resume);
+	}
 
 }

@@ -35,4 +35,10 @@ public class ResumeManager implements ResumeService {
 		return new SuccessDataResult<List<Resume>>(this.resumeDao.findAll(), "Data listelendi") ;
 	}
 
+	@Override
+	public Result update(Resume resume) {
+		this.resumeDao.save(resume);
+		return new SuccessResult("guncellendi");
+	}
+
 }

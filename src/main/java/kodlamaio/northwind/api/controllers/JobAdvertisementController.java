@@ -73,4 +73,14 @@ public class JobAdvertisementController {
 		return this.jobAdvertisementService.getAllConfirmedJobAdvertisements();
 	}
 	
+	@GetMapping("/getByCityId")
+	public DataResult<List<JobAdvertisement>> getByCityId(@RequestParam int cityId){
+		return this.jobAdvertisementService.getByCityId(cityId);
+	}
+	
+	@GetMapping("/getByJobWorkHourId")
+	public DataResult<List<JobAdvertisement>> getByJobWorkHourId(@RequestParam int jobWorkHourId){
+		return this.jobAdvertisementService.getByWorkHourTypeId(jobWorkHourId);
+	}
+	
 }

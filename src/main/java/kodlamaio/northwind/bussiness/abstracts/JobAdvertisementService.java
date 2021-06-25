@@ -25,4 +25,8 @@ public interface JobAdvertisementService {
 	DataResult<List<JobAdvertisement>> getByIsActive( Boolean isActive);
 
 	DataResult<List<JobAdvertisement>> getAllConfirmedJobAdvertisements();
+	
+	DataResult<List<JobAdvertisement>> getByCityId(int cityId);
+	
+	DataResult<List<JobAdvertisement>> getByWorkHourTypeId(int workHourTypeId);
 }

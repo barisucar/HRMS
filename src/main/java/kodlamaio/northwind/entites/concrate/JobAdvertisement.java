@@ -30,25 +30,40 @@ public class JobAdvertisement {
 	@Column(name="job_advertisement_id")
 	private int jobAdvertisementId;
 	
-	@ManyToOne()
-	@JoinColumn(name = "job_position_id")
-	private Job job;
+	//@ManyToOne()
+	//@JoinColumn(name = "job_position_id")
+	//private Job job;
 	
-	@ManyToOne()
-	@JoinColumn(name = "employer_id")
-	private Employer employer;
+	@Column(name="job_position_id")
+	private int jobPositionId;
 	
-	@ManyToOne()
-	@JoinColumn(name="city_id")
-	private City city;
+	//@ManyToOne()
+	//@JoinColumn(name = "employer_id")
+	//private Employer employer;
 	
-	@ManyToOne()
-	@JoinColumn(name="job_work_hour_type_id")
-	private JobWorkHourType jobWorkHourType;
+	@Column(name="employer_id")
+	private int employerId;
 	
-	@ManyToOne()
-	@JoinColumn(name="job_work_type_id")
-	private WorkType workType;
+	//@ManyToOne()
+	//@JoinColumn(name="city_id")
+	//private City city;
+	
+	@Column(name="city_id")
+	private int cityId;
+	
+	//@ManyToOne()
+	//@JoinColumn(name="job_work_hour_type_id")
+	//private JobWorkHourType jobWorkHourType;
+	
+	@Column(name="job_work_hour_type_id")
+	private int jobWorkHourTypeId;
+	
+	//@ManyToOne()
+	//@JoinColumn(name="job_work_type_id")
+	//private WorkType workType;
+	
+	@Column(name="job_work_type_id")
+	private int jobWorkTypeId;
 	
 	@Column(name="job_description")
 	private String jobDescription;

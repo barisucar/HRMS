@@ -17,12 +17,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class JobSeeker {
+public class JobSeeker extends User{
 
-	@Id
-	@GeneratedValue
-	@Column(name = "user_id")
-	private int userId;
+
 
 	@Column(name = "first_name")
 	private String firstName;
@@ -31,12 +28,10 @@ public class JobSeeker {
 	private String lastName;
 
 	@Column(name = "national_identity")
-	private String nationalIdentity;
+	private int nationalIdentity;
 
 	@Column(name = "birth_year")
-	private String birthYear;
+	private int birthYear;
 	
-	@ManyToOne()
-	@JoinColumn(name ="id")
-	private Resume resume;
+
 }

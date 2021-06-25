@@ -10,6 +10,8 @@ public interface ResumeService {
 
 	Result add(Resume resume);
 	
+	Result update(Resume resume);
+	
 	DataResult<List<Resume>> getAll();
 	
 }

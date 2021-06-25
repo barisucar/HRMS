@@ -23,5 +23,10 @@ public interface JobAdvertisementDao extends JpaRepository<JobAdvertisement, Int
 	
 	List<JobAdvertisement> getOneByJobAdvertisementId(int id);
 	
+	@Query("From JobAdvertisement where city_id=:cityId")
+	List<JobAdvertisement> getByCityId(int cityId);
+	
+	@Query("From JobAdvertisement where job_work_hour_type_id=:jobWorkHourTypeId")
+	List<JobAdvertisement> getByJobWorkHourTypeId(int jobWorkHourTypeId);
 		
 }

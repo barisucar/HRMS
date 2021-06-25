@@ -95,6 +95,18 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getAllConfirmedJobAdvertisements(),"Datalar listelendi");
 	}
 
+	@Override
+	public DataResult<List<JobAdvertisement>> getByCityId(int cityId) {
+		return new SuccessDataResult<List<JobAdvertisement>>
+		(this.jobAdvertisementDao.getByCityId(cityId),"Data Listelendi");
+	}
+
+	@Override
+	public DataResult<List<JobAdvertisement>> getByWorkHourTypeId(int workHourTypeId) {
+		return new SuccessDataResult<List<JobAdvertisement>>
+		(this.jobAdvertisementDao.getByJobWorkHourTypeId(workHourTypeId),"Data Listelendi");
+	}
+
 
 	
 
