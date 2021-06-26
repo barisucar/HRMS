@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="links")
-public class Link {
+public abstract class Link {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

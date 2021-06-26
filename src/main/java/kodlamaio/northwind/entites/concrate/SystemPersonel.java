@@ -2,6 +2,9 @@ package kodlamaio.northwind.entites.concrate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -13,8 +16,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "system_personnel")
-public class SystemPersonel extends User {
+public class SystemPersonel{
 
+	@Id
+	@Column(name="id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 	
 	@Column(name="first_name")
 	private String firstName;

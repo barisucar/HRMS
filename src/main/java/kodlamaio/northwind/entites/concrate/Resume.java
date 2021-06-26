@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="resumes")
-public class Resume {
+public class Resume{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,9 +42,11 @@ public class Resume {
 	@JoinColumn(name ="skill_id")
 	private Skill skill;
 	
-	@ManyToOne()
-	@JoinColumn(name ="link_id")
-	private Link link;
+	@Column(name="github_link")
+	private String githubLink;
+	
+	@Column(name="linkedin_link")
+	private String linkedinLink;
 	
 	@ManyToOne()
 	@JoinColumn(name="school_department_id")
